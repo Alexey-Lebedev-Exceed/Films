@@ -11,16 +11,6 @@ let firebaseConfig = {
   measurementId: "G-LRZM6R8MDN"
 };
 
-// var firebaseConfig = {
-//   apiKey: "AIzaSyBXeWO6w5rqqHlUU-GDCUOnbzYPMJAAMG4",
-//   authDomain: "test-test-ff98e.firebaseapp.com",
-//   databaseURL: "https://test-test-ff98e-default-rtdb.firebaseio.com",
-//   projectId: "test-test-ff98e",
-//   storageBucket: "test-test-ff98e.appspot.com",
-//   messagingSenderId: "204414881646",
-//   appId: "1:204414881646:web:ffc686747367e16ccc3b7f",
-//   measurementId: "G-KRQC7H3W8D"
-// };
 
 firebase.initializeApp(firebaseConfig);
 

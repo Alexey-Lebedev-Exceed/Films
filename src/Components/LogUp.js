@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { auth } from '../firebase';
 import firebase from 'firebase';
 import Header from './Header';
 import Footer from './Footer';
+
 
 const LogUp = () => {
   const [user, setUser] = useState()
@@ -55,7 +57,7 @@ const LogUp = () => {
       <Header/>
       <div class='mainUp'>
         <div className='LogUpGeneral'>
-          <div classNam='LogUpLeft'>
+          <div className='LogUpLeft'>
             <h3>Преимущества членства</h3>
             <div className='LogUpTable'>
               <ul>
@@ -120,7 +122,7 @@ const LogUp = () => {
             </div>
             <div className='LogUpButton'>
               <button onClick={() => signUp()}>Регистрация</button>
-              <a href=''>Отменить</a>
+              <Link to='/home'>Отменить</Link>
             </div>
           </div>
         </div>

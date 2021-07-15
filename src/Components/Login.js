@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { auth } from '../firebase';
 import firebase from 'firebase';
 import Footer from './Footer';
@@ -48,8 +49,8 @@ const LogIn = () => {
         <div className='LogInGeneral'>
           <div className='LogInContent'>
             <h2>Войти в свою учётную запись</h2>
-            <p>Чтобы пользоваться правкой и возможностями рейтинга TMDb, а также получить персональные рекомендации, необходимо войти в свою учётную запись. Если у вас нет учётной записи, её регистрация является бесплатной и простой. <a href=''>Нажмите здесь</a>, чтобы начать.</p>
-            <p>Если Вы зарегистрировались, но не получили письмо для подтверждения, <a href=''>нажмите здесь</a>, чтобы отправить письмо повторно.</p>
+            <p>Чтобы пользоваться правкой и возможностями рейтинга TMDb, а также получить персональные рекомендации, необходимо войти в свою учётную запись. Если у вас нет учётной записи, её регистрация является бесплатной и простой. <Link to='/logup'>Нажмите здесь</Link>, чтобы начать.</p>
+            <p>Если Вы зарегистрировались, но не получили письмо для подтверждения, <Link to='/resend-email-verification'>нажмите здесь</Link>, чтобы отправить письмо повторно.</p>
           </div>
           <div className='LogInInputs'>
             <label>Имя пользователя</label>
@@ -67,7 +68,7 @@ const LogIn = () => {
           </div>
           <div className='LogInButton'>
             <button onClick={() => signIn()}>Войти</button>
-            <a href=''>Сбросить пароль</a>
+            <Link to='/reset-password'>Сбросить пароль</Link>
           </div>
         </div>
       </div>

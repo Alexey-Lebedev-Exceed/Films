@@ -9,9 +9,9 @@ const Header = () => {
       <div className='containerLeftRight'>
       <div className='leftNavigation'>
         <img src={urlLogo} alt='logo'/>
-        <ul type='none' className="topmenu">
+        <ul className="topmenu">
           <li className="submenu-link">Фильмы
-            <ul type='none' className="submenu">
+            <ul className="submenu">
               <li>Популярные</li>
               <li>Смотрят сейчас</li>
               <li>Ожидаемые</li>
@@ -19,7 +19,7 @@ const Header = () => {
             </ul>
           </li>
           <li className="submenu-link">Сериалы
-            <ul type='none' className="submenu">
+            <ul className="submenu">
               <li>Популярные</li>
               <li>В эфире сегодня</li>
               <li>По телевидению</li>
@@ -27,12 +27,12 @@ const Header = () => {
             </ul>
           </li>
           <li className="submenu-link">Люди
-            <ul type='none' className="submenu">
+            <ul className="submenu">
               <li>Популярные люди</li>
             </ul>
           </li>
           <li className="submenu-link">Еще
-            <ul type='none' className="submenu">
+            <ul className="submenu">
               <li>Обсуждения</li>
               <li>Доска почета</li>
               <li>Поддержка</li>
@@ -42,17 +42,16 @@ const Header = () => {
         </ul>
       </div>
       <div className='rightNavigation'>
-      <a href=''>
+      <Link to=''>
           <img src='https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-371-plus-white-0bac34f16124808a12ea863b4d9cc6e599dee7c0a80658cfe9ead26939e64517.svg' alt='plus'/>
-        </a>
+        </Link>
         <div className='language'>RU</div>
         <Link to='/login'>Войти</Link>
         <Link to='/logup'>Присоединиться к TMDB</Link>
-        <a href=''>
+        <Link to='/search'>
           <img src='https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-28-search-blue-177462d06db81ff2a02aa022c1c0be5ba4200d7bd3f51091ed9298980e3a26a1.svg' alt='search'/>
-        </a>
+        </Link>
       </div>
-
       </div>
     </div>
   )
