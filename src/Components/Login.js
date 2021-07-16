@@ -13,26 +13,27 @@ const LogIn = () => {
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((userAuth) => {
-      const user = {
+      const user1 = {
         uid: userAuth.uid,
         login: userAuth.login,
         pass: userAuth.pass
       };
       if (userAuth) {
 
-        setUser(user);
+        setUser(user1);
         firebase
           .database()
           .ref(`users/${user.uid}`)
           .on("value", (res) => {
             const allUser = res.val();
+            console.log(allUser);
           });
       } else {
         setUser(null);
       }
     });
     return unsubscribe;
-  }, []);
+  });
 
   const signIn = () => {
 

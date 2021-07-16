@@ -1,5 +1,4 @@
 import React from 'react';
-import Popular from './Popular';
 
 const ButtonsHeadersCategori = ({ setUrl }) => {
   const onlineChange = () => {
