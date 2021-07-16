@@ -2,12 +2,8 @@ import React, { useState, useEffect } from 'react';
 import PopularFilmsList from './PopularFilmsList';
 import axios from 'axios';
 
-
-
-const Popular = () => {
+const Popular = ({ url }) => {
   const [allFilms, setAllFilms] = useState([])
-
-  const url = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&query=star%20wars&page=1&include_adult=false`;
 
   useEffect(() => {
     const fetchData = () => {

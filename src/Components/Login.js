@@ -11,7 +11,6 @@ const LogIn = () => {
   const [pass,setPass]=useState()
   const [user, setUser] = useState()
 
-
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((userAuth) => {
       const user = {
@@ -20,6 +19,7 @@ const LogIn = () => {
         pass: userAuth.pass
       };
       if (userAuth) {
+
         setUser(user);
         firebase
           .database()
@@ -35,6 +35,7 @@ const LogIn = () => {
   }, []);
 
   const signIn = () => {
+
     auth.signInWithEmailAndPassword(login, pass)
       .then((res) => {
         localStorage.setItem('token', res.user.refreshToken);

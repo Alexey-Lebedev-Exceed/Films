@@ -1,7 +1,7 @@
 *{
   margin: 0;
   padding: 0;
-  color: white;
+  color: black;
   font-family: 'Source Sans Pro', Arial, sans-serif;
   font-size: 1em;
   -webkit-font-smoothing: antialiased;
@@ -41,6 +41,7 @@ ul {
       height: 100%;
       align-items: center;
       justify-content: space-between;
+      color: white;
     }
   
     .rightNavigation{
@@ -384,11 +385,6 @@ ul {
   }
 }
 
-
-.popular-films {
-  display: flex;
-}
-
 .welcome {
   background-image: linear-gradient(to right, rgba(3,37,65, 0.8) 0%, rgba(3,37,65, 0) 100%), url(./Image/welcome-main-backgraund.jpg);
   min-height: 300px;
@@ -447,3 +443,16 @@ ul {
     }  
   }
 }
+
+
+.popular {
+
+  .popular-films {
+    display: flex;
+    overflow-x: auto;
+    .film {
+      
+    }
+  }
+}
+

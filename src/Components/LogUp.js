@@ -11,7 +11,6 @@ const LogUp = () => {
   const [login,setLogin]=useState()
   const [pass,setPass]=useState()
 
-
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((userAuth) => {
       const user = {
@@ -34,15 +33,6 @@ const LogUp = () => {
     return unsubscribe;
   }, []);
 
-  const save = (uid) => {
-    let newTemplate = firebase.database().ref(`/users/${uid}`);
-    newTemplate.update({
-      login: login,
-      pass: pass,
-      uid: uid
-    });
-  }
-
   const signUp = () => {
     auth.createUserWithEmailAndPassword(login, pass)
     .then((res) => {
@@ -52,10 +42,19 @@ const LogUp = () => {
     .catch ((error) => {
     })
   }
+
+  const save = (uid) => {
+    let newTemplate = firebase.database().ref(`/users/${uid}`);
+    newTemplate.update({
+      login: login,
+      pass: pass,
+      uid: uid
+    });
+  }
   return(
     <div className='LogUp'>
       <Header/>
-      <div class='mainUp'>
+      <div className='mainUp'>
         <div className='LogUpGeneral'>
           <div className='LogUpLeft'>
             <h3>Преимущества членства</h3>
